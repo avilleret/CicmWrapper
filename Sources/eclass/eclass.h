@@ -143,7 +143,7 @@ eclass_new_attr_typed(c,name, "symbol", calcoffset(struct,size), maxsize, flags,
 eclass_new_attr_typed(c,name, "atom", calcoffset(struct,size), maxsize, flags, calcoffset(struct,member))
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//! MACRO TO DEFINE ATTRIBUTE OF ATTRIBUES
+//! MACRO TO DEFINE ATTRIBUTE OF ATTRIBUTES
 /*
  \ @memberof        eattr
  \ @param c         The eclass pointer

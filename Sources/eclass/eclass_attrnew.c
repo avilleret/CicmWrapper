@@ -26,7 +26,7 @@
 
 #include "eclass.h"
 
-//! Allocate the memory and intializa an new attribute for an eclass (You should prefer to use the MACROS)
+//! Allocate the memory and intialize a new attribute for an eclass (You should prefer to use the MACROS)
 /*
  \ @memberof        eattr
  \ @param c         The eclass pointer
