@@ -53,6 +53,7 @@ void eclass_new_attr_typed(t_eclass* c, char* attrname, char* type, long size, l
     c->c_attr = (t_eattr *)realloc(c->c_attr, (c->c_nattr + 1) * sizeof(t_eattr));
     if(c->c_attr)
     {
+        c->c_attr[c->c_nattr].obj = (t_object *) &c->c_attr[c->c_nattr];
         c->c_attr[c->c_nattr].name = gensym(attrname);
         c->c_attr[c->c_nattr].type = gensym(type);
         c->c_attr[c->c_nattr].category = c->c_class.c_name;
