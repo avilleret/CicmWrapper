@@ -186,7 +186,9 @@ int obj_isfloatoutlet(t_object *x, int m);
 int obj_isfloatinlet(t_object *x, int m);
 void canvas_deletelines_for_io(t_canvas *x, t_text *text, t_inlet *inp, t_outlet *outp);
 
-void* object_method(void* x, t_symbol* s, void* z, method method, long number, void* other);
+//void* object_method(void* x, t_symbol* s, void* z, method method, long number, void* other);
+void* object_method(void* x, t_symbol* s, ...);
+method object_getmethod(void* x, t_symbol* s);
 void object_attr_setvalueof(t_object *x, t_symbol* s, long argc, t_atom* argv);
 void object_attr_getvalueof(t_object *x, t_symbol *s, long *argc, t_atom **argv);
 

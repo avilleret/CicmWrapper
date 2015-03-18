@@ -95,16 +95,19 @@ void canvas_deletelines_for_io(t_canvas *x, t_text *text, t_inlet *inp, t_outlet
     }
 }
 
+/*
 void* object_method(void* x, t_symbol* s, void* z, method method, long number, void* other)
 {
     rmethod nrmethod = (rmethod)getfn((t_pd *)x, s);
     return nrmethod(x, s, z, method, number, other);
 }
-/*
+*/
+
 void* object_method(void* x, t_symbol* s, ...)
 {
     va_list arguments;
 
+    /*
     va_start(arguments, s);
     while (*vp)
     {
@@ -113,10 +116,16 @@ void* object_method(void* x, t_symbol* s, ...)
         *vp = va_arg(arguments, t_atomtype);
     }
     va_end(ap);
+    */
 
     rmethod nrmethod = (rmethod)getfn((t_pd *)x, s);
-    return nrmethod(x, s, ...);
-}*/
+    return nrmethod(x, s, arguments);
+}
+
+method object_getmethod(void* x, t_symbol* s)
+{
+    return (method)getfn((t_pd *)x, s);
+}
 
 void object_attr_setvalueof(t_object *x, t_symbol* s, long argc, t_atom* argv)
 {
