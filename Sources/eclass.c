@@ -859,6 +859,7 @@ static void ewidget_init(t_eclass* c)
  */
 static void eclass_properties_dialog(t_eclass* c)
 {
+#ifndef PURR_DATA
     int i, j, lenght;
     char buffer[1000];
     char temp[1000];
@@ -1004,7 +1005,7 @@ static void eclass_properties_dialog(t_eclass* c)
         }
     }
     sys_gui("}\n");
-    
+#endif
 }
 
 
